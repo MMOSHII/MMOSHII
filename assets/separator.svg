@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 30" width="100%" height="30">
+  <defs>
+    <linearGradient id="main-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0" />
+      <stop offset="15%" stop-color="#00F2FE" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#9B51E0" stop-opacity="1" />
+      <stop offset="85%" stop-color="#00F2FE" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00F2FE" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="pulse-right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00F2FE" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="pulse-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FF007A" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .glow-effect {
+      filter: url(#glow);
+    }
+    
+    .sweep-right {
+      animation: moveRight 4.5s infinite linear;
+    }
+    
+    .sweep-left {
+      animation: moveLeft 4.5s infinite linear;
+    }
+    
+    .center-node {
+      animation: pulseNode 2s infinite ease-in-out;
+      transform-origin: 520px 15px;
+    }
+
+    @keyframes moveRight {
+      0% { transform: translateX(-400px); }
+      100% { transform: translateX(1200px); }
+    }
+
+    @keyframes moveLeft {
+      0% { transform: translateX(1200px); }
+      100% { transform: translateX(-400px); }
+    }
+
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; filter: drop-shadow(0 0 6px #00F2FE); }
+    }
+  </style>
+
+  <rect x="0" y="14" width="1200" height="2" fill="url(#main-gradient)" opacity="0.6" filter="url(#glow)" />
+  <rect class="glow-effect" x="0" y="14" width="1200" height="2" rx="1" fill="url(#main-gradient)" />
+
+  <g class="glow-effect" clip-path="url(#line-clip)">
+    <rect class="sweep-right" x="0" y="13" width="250" height="4" fill="url(#pulse-right)" rx="2" />
+    <rect class="sweep-left" x="0" y="13" width="200" height="4" fill="url(#pulse-left)" rx="2" />
+  </g>
+
+  <g class="center-node">
+    <polygon points="520,10 525,15 520,20 515,15" fill="#FFFFFF" filter="url(#glow)" />
+  </g>
+</svg>
