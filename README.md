@@ -4,11 +4,11 @@
   <img src="./assets/banner.svg" alt="MMOSHII banner" width="100%">
 </p>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&weight=700&size=30&duration=2500&pause=800&color=00FF00&center=true&vCenter=true&width=900&height=50&lines=Building+Things+That+Actually+Work;AI+%7C+Software+%7C+Computer+Vision;Learning+by+Building+Real+Projects;Code+%E2%86%92+Experiment+%E2%86%92+Improve)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&weight=700&size=30&duration=2500&pause=800&color=006199&center=true&vCenter=true&width=900&height=50&lines=Building+Things+That+Actually+Work;AI+%7C+Software+%7C+Computer+Vision;Learning+by+Building+Real+Projects;Code+%E2%86%92+Experiment+%E2%86%92+Improve)
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+<img src="./assets/separator.svg" alt="Separator" width="100%">
 
 #### About Me:
 
@@ -31,10 +31,12 @@ class Human:
 me = Human()
 ```
 
+<p align="justify">
 I'm Human (@MMOSHII), a developer who enjoys turning ideas into working software.
 My projects explore AI/ML, computer vision, APIs, application development, and game development. I prefer learning through implementation: build something, discover what breaks, understand why it breaks, and then make the system less terrible.
+</p>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+<img src="./assets/separator.svg" alt="Separator" width="100%">
 
 <div align="center">
 
@@ -44,7 +46,7 @@ My projects explore AI/ML, computer vision, APIs, application development, and g
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+<img src="./assets/separator.svg" alt="Separator" width="100%">
 
 <div align="center">
 
@@ -76,7 +78,7 @@ graph LR
     style J fill:#0D1117,stroke:#00FF00,color:#00FF00
 ```
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+<img src="./assets/separator.svg" alt="Separator" width="100%">
 
 <div align="center">
 
@@ -136,7 +138,7 @@ graph LR
 
 </div>
 
-<!-- <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+<!-- <img src="./assets/separator.svg" alt="Separator" width="100%">
 
 <div align="center">
 
@@ -161,7 +163,7 @@ graph LR
 
 </div> -->
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+<img src="./assets/separator.svg" alt="Separator" width="100%">
 
 <div align="center">
 
