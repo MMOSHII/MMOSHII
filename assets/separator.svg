@@ -2,21 +2,21 @@
   <defs>
     <linearGradient id="main-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F2FE" stop-opacity="0" />
-      <stop offset="15%" stop-color="#00F2FE" stop-opacity="0.8" />
+      <stop offset="20%" stop-color="#00F2FE" stop-opacity="0.8" />
       <stop offset="50%" stop-color="#9B51E0" stop-opacity="1" />
-      <stop offset="85%" stop-color="#00F2FE" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#00F2FE" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#00F2FE" stop-opacity="0" />
     </linearGradient>
 
-    <linearGradient id="pulse-right" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="pulse-from-left" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
       <stop offset="50%" stop-color="#00F2FE" stop-opacity="1" />
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
 
-    <linearGradient id="pulse-left" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="pulse-from-right" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FF007A" stop-opacity="1" />
+      <stop offset="50%" stop-color="#00F2FE" stop-opacity="1" />
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
 
@@ -34,44 +34,49 @@
       filter: url(#glow);
     }
     
-    .sweep-right {
-      animation: moveRight 4.5s infinite linear;
+    .sweep-left-to-center {
+      animation: moveLeftToCenter 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
     }
     
-    .sweep-left {
-      animation: moveLeft 4.5s infinite linear;
+    .sweep-right-to-center {
+      animation: moveRightToCenter 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .center-node {
-      animation: pulseNode 2s infinite ease-in-out;
-      transform-origin: 520px 15px;
+      animation: pulseSync 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+      transform-origin: 600px 15px;
     }
 
-    @keyframes moveRight {
-      0% { transform: translateX(-400px); }
-      100% { transform: translateX(1200px); }
+    @keyframes moveLeftToCenter {
+      0% { transform: translateX(-200px); opacity: 0; }
+      20% { opacity: 1; }
+      50% { transform: translateX(475px); opacity: 1; }
+      70%, 100% { transform: translateX(475px); opacity: 0; }
     }
 
-    @keyframes moveLeft {
-      0% { transform: translateX(1200px); }
-      100% { transform: translateX(-400px); }
+    @keyframes moveRightToCenter {
+      0% { transform: translateX(1200px); opacity: 0; }
+      20% { opacity: 1; }
+      50% { transform: translateX(525px); opacity: 1; }
+      70%, 100% { transform: translateX(525px); opacity: 0; }
     }
 
-    @keyframes pulseNode {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.3); opacity: 1; filter: drop-shadow(0 0 6px #00F2FE); }
+    @keyframes pulseSync {
+      0%, 45% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.6); opacity: 1; filter: drop-shadow(0 0 8px #00F2FE); }
+      65%, 100% { transform: scale(1); opacity: 0.5; }
     }
   </style>
 
   <rect x="0" y="14" width="1200" height="2" fill="url(#main-gradient)" opacity="0.6" filter="url(#glow)" />
   <rect class="glow-effect" x="0" y="14" width="1200" height="2" rx="1" fill="url(#main-gradient)" />
 
-  <g class="glow-effect" clip-path="url(#line-clip)">
-    <rect class="sweep-right" x="0" y="13" width="250" height="4" fill="url(#pulse-right)" rx="2" />
-    <rect class="sweep-left" x="0" y="13" width="200" height="4" fill="url(#pulse-left)" rx="2" />
+  <g class="glow-effect">
+    <rect class="sweep-left-to-center" x="0" y="13" width="200" height="4" fill="url(#pulse-from-left)" rx="2" />
+    <rect class="sweep-right-to-center" x="0" y="13" width="200" height="4" fill="url(#pulse-from-right)" rx="2" />
   </g>
 
   <g class="center-node">
-    <polygon points="520,10 525,15 520,20 515,15" fill="#FFFFFF" filter="url(#glow)" />
+    <polygon points="600,9 606,15 600,21 594,15" fill="#FFFFFF" filter="url(#glow)" />
   </g>
 </svg>
