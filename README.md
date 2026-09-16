@@ -4,7 +4,7 @@
   <img src="./assets/banner.svg" alt="MMOSHII banner" width="100%">
 </p>
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&weight=700&size=30&duration=2500&pause=800&color=006199&center=true&vCenter=true&width=900&height=50&lines=Building+Things+That+Actually+Work;AI+%7C+Software+%7C+Computer+Vision;Learning+by+Building+Real+Projects;Code+%E2%86%92+Experiment+%E2%86%92+Improve)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=JetBrains+Mono&weight=700&size=30&duration=2500&pause=800&color=90D5FF&center=true&vCenter=true&width=900&height=50&lines=Building+Things+That+Actually+Work;AI+%7C+Software+%7C+Computer+Vision;Learning+by+Building+Real+Projects;Code+%E2%86%92+Experiment+%E2%86%92+Improve)
 
 </div>
 
